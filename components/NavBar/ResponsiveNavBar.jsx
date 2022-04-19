@@ -4,7 +4,7 @@ export default function ResponsiveNavBar({ onView }) {
   return (
     <>
       <nav
-        className={`flex md:hidden justify-start items-center flex-col fixed top-0 left-0 bg-pink mt-20 w-1/2 min-h-screen transition-all duration-300 ease-in-out ${
+        className={`flex md:hidden justify-start items-center flex-col fixed top-0 left-0 bg-purple mt-20 w-1/2 min-h-screen transition-all duration-300 ease-in-out ${
           !onView ? '-ml-96' : 'm-0'
         } font-barlow text-lg font-medium`}
       >

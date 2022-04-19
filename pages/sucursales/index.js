@@ -8,7 +8,7 @@ export default function Stores() {
         <title>El Tallercito De Monica | Sucursales</title>
       </Head>
       <Layout>
-        <h1 className='text-center text-5xl font-semibold'>Inicio</h1>
+        <h1 className='text-center text-5xl font-semibold'>Sucursales</h1>
       </Layout>
     </>
   );

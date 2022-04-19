@@ -12,7 +12,7 @@ export default function Home() {
         />
       </Head>
       <Layout>
-        <h1 className='text-center text-5xl font-semibold'>Inicio</h1>
+        <h1 className='p-10'>El Tallercito De Monica</h1>
       </Layout>
     </>
   );
