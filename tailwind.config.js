@@ -20,7 +20,12 @@ module.exports = {
     fontFamily: {
       barlow: ['Barlow Condensed'],
     },
-    extend: {},
+    extend: {
+      spacing: {
+        600: '37.5rem',
+        900: '56.25rem',
+      },
+    },
   },
   plugins: [],
 };
