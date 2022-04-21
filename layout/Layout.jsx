@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <>
       <header
-        className={`w-full h-20 bg-purple flex justify-center items-center fixed z-50 text-white`}
+        className={`w-full h-20 bg-purple flex justify-center items-center fixed z-50 text-white shadow-lg`}
       >
         <NavBar path={router.pathname} />
       </header>
