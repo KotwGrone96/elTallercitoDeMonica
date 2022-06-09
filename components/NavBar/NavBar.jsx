@@ -88,7 +88,7 @@ export default function NavBar({ path }) {
             Sucursales
           </a>
         </Link>
-        <Link href='/contacto'>
+        {/* <Link href='/contacto'>
           <a
             className={`p-2 pt-1 pb-1 ml-1 mr-1 hover:text-green ${
               currentPath === '/contacto'
@@ -98,7 +98,7 @@ export default function NavBar({ path }) {
           >
             Contacto
           </a>
-        </Link>
+        </Link> */}
       </nav>
       <ResponsiveNavBar onView={onView} path={path} />
     </>

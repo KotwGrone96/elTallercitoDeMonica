@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       >
         <NavBar path={router.pathname} />
       </header>
-      <main className='min-h-screen pt-20'>{children}</main>
+      <main className='min-h-screen pt-20 pb-20'>{children}</main>
       <footer className='w-full h-20 bg-purple'></footer>
     </>
   );

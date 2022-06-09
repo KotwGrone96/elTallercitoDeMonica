@@ -53,15 +53,6 @@ export default function ResponsiveNavBar({ onView, path }) {
             Sucursales
           </a>
         </Link>
-        <Link href='/contacto'>
-          <a
-            className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
-              path === '/contacto' ? 'bg-green' : ''
-            }`}
-          >
-            Contacto
-          </a>
-        </Link>
       </nav>
     </>
   );

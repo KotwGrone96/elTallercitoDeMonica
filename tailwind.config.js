@@ -15,11 +15,14 @@ module.exports = {
       hoverGreen: '#0eeab3',
       white: '#ffffff',
       lessWhite: '#f1f1f1',
+      bodyBg: '#f3f3f3',
       black: '#000000',
       lessBlack: '#1f1f1f',
+      brown: '#C18C7A',
     },
     fontFamily: {
       barlow: ['Barlow Condensed'],
+      lobster2: ['Lobster Two'],
     },
     extend: {
       spacing: {
@@ -33,6 +36,7 @@ module.exports = {
       backgroundSize: {
         65: '65%',
         100: '100%',
+        90: '90%',
       },
       boxShadow: {
         normal: '5px 3px 10px #8685EF',
