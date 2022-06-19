@@ -19,6 +19,17 @@ export default function NavBar({ path }) {
     setCurrentPath(path);
   }, [path]);
 
+  const handleMouseEnter = () => {
+    const menu = document.querySelector('.menu-sucursales');
+    menu.classList.remove('hidden');
+    menu.classList.add('flex');
+  };
+  const handleMouseLeave = () => {
+    const menu = document.querySelector('.menu-sucursales');
+    menu.classList.remove('flex');
+    menu.classList.add('hidden');
+  };
+
   return (
     <>
       <img
@@ -77,30 +88,28 @@ export default function NavBar({ path }) {
             Servicios
           </a>
         </Link>
-        <Link href='/sucursales'>
-          <a
-            className={`p-2 pt-1 pb-1 ml-1 mr-1 hover:text-green ${
-              currentPath === '/sucursales'
-                ? 'rounded-lg hover:text-white bg-green'
-                : ''
-            }`}
-          >
-            Sucursales
-          </a>
-        </Link>
-        {/* <Link href='/contacto'>
-          <a
-            className={`p-2 pt-1 pb-1 ml-1 mr-1 hover:text-green ${
-              currentPath === '/contacto'
-                ? 'rounded-lg hover:text-white bg-green'
-                : ''
-            }`}
-          >
-            Contacto
-          </a>
-        </Link> */}
+        <div
+          className={`
+        p-2 pt-1 pb-1 ml-1 mr-1 cursor-pointer relative ${
+          currentPath.includes('/sucursales')
+            ? 'rounded-lg hover:text-white bg-green'
+            : ''
+        }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          Sucursales
+          <div className='hidden flex-col absolute bg-purple border w-32 menu-sucursales'>
+            <Link href='/sucursales/caba'>
+              <a className={`p-2 pt-1 pb-1  hover:bg-green w-full `}>CABA</a>
+            </Link>
+            <Link href='/sucursales/villamaipu'>
+              <a className={`p-2 pt-1 pb-1 hover:bg-green `}>Villa Maipú</a>
+            </Link>
+          </div>
+        </div>
       </nav>
-      <ResponsiveNavBar onView={onView} path={path} />
+      <ResponsiveNavBar onView={onView} path={path} setOnView={setOnView} />
     </>
   );
 }

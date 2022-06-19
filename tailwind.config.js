@@ -19,6 +19,8 @@ module.exports = {
       black: '#000000',
       lessBlack: '#1f1f1f',
       brown: '#C18C7A',
+      lessGray: '#A1A6B9',
+      gray: '#505050',
     },
     fontFamily: {
       barlow: ['Barlow Condensed'],

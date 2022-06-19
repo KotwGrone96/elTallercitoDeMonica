@@ -1,6 +1,17 @@
 import Link from 'next/link';
 
-export default function ResponsiveNavBar({ onView, path }) {
+export default function ResponsiveNavBar({ onView, path, setOnView }) {
+  const handleMouseEnter = () => {
+    const menu = document.querySelector('.menu-sucursales-res');
+    menu.classList.remove('hidden');
+    menu.classList.add('flex');
+  };
+  const handleMouseLeave = () => {
+    const menu = document.querySelector('.menu-sucursales-res');
+    menu.classList.remove('flex');
+    menu.classList.add('hidden');
+  };
+
   return (
     <>
       <nav
@@ -44,15 +55,33 @@ export default function ResponsiveNavBar({ onView, path }) {
             Servicios
           </a>
         </Link>
-        <Link href='/sucursales'>
-          <a
-            className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
-              path === '/sucursales' ? 'bg-green' : ''
-            }`}
-          >
-            Sucursales
-          </a>
-        </Link>
+        <div
+          className={`p-4 pl-0 pr-0 w-full text-center relative cursor-pointer ${
+            path.includes('sucursales') ? 'bg-green' : ''
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          Sucursales
+          <div className='hidden mt-2 flex-col absolute bg-halfPurple w-full menu-sucursales-res'>
+            <Link href='/sucursales/caba'>
+              <a
+                className={`p-2 hover:bg-green w-full `}
+                onClick={() => setOnView(false)}
+              >
+                CABA
+              </a>
+            </Link>
+            <Link href='/sucursales/villamaipu'>
+              <a
+                className={`p-2 hover:bg-green w-full`}
+                onClick={() => setOnView(false)}
+              >
+                Villa Maipú
+              </a>
+            </Link>
+          </div>
+        </div>
       </nav>
     </>
   );

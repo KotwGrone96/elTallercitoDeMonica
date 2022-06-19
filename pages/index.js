@@ -1,8 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Layout from '../layout/Layout';
+import Link from 'next/link';
 
 export default function Home() {
+  const handleSucursalImgEnter = (e, num) => {
+    const { target } = e;
+    target.style.transition = 'opacity .5s';
+    setTimeout(() => {
+      target.style.opacity = '0';
+    });
+    setTimeout(() => {
+      target.style.opacity = '1';
+      target.setAttribute('src', `images/sucursal-${num}-hover.jpg`);
+    }, 250);
+  };
+  const handleSucursalImgLeave = (e, num) => {
+    const { target } = e;
+    target.style.transition = 'opacity .3s';
+    setTimeout(() => {
+      target.style.opacity = '0';
+    });
+    setTimeout(() => {
+      target.style.opacity = '1';
+      target.setAttribute('src', `images/sucursal-${num}.jpg`);
+    }, 150);
+  };
+
   return (
     <>
       <Head>
@@ -41,8 +65,13 @@ export default function Home() {
                 alt='Disfraces'
                 className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
               />
-              <figcaption className='font-medium -translate-y-4 text-center text-xl text-green md:translate-y-0 md:text-3xl'>
-                Disfraces
+              <figcaption
+                style={{
+                  textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
+                }}
+                className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
+              >
+                DISFRACES
               </figcaption>
             </figure>
             <figure>
@@ -51,8 +80,13 @@ export default function Home() {
                 alt='Cotillón'
                 className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
               />
-              <figcaption className='font-medium -translate-y-4 text-center text-xl text-green md:translate-y-0 md:text-3xl'>
-                Cotillón
+              <figcaption
+                style={{
+                  textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
+                }}
+                className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
+              >
+                COTILLÓN
               </figcaption>
             </figure>
             <figure>
@@ -61,8 +95,13 @@ export default function Home() {
                 alt='Tortas'
                 className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
               />
-              <figcaption className='font-medium -translate-y-4 text-center text-xl text-green md:translate-y-0 md:text-3xl'>
-                Tortas
+              <figcaption
+                style={{
+                  textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
+                }}
+                className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
+              >
+                TORTAS
               </figcaption>
             </figure>
             <figure>
@@ -71,8 +110,13 @@ export default function Home() {
                 alt='Castillo Inflable'
                 className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
               />
-              <figcaption className='font-medium -translate-y-4 text-center text-xl text-green md:translate-y-0 md:text-3xl'>
-                Castillo inflable
+              <figcaption
+                style={{
+                  textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
+                }}
+                className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
+              >
+                CASTILLO INFLABLE
               </figcaption>
             </figure>
             <figure>
@@ -81,8 +125,13 @@ export default function Home() {
                 alt='metegol'
                 className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
               />
-              <figcaption className='font-medium -translate-y-4 text-center text-xl text-green md:translate-y-0 md:text-3xl'>
-                Metegol
+              <figcaption
+                style={{
+                  textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
+                }}
+                className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
+              >
+                METEGOL
               </figcaption>
             </figure>
           </div>
@@ -95,14 +144,14 @@ export default function Home() {
             Sobre el tallercito
           </h2>
           <div className='w-full max-w-screen-xl m-auto p-4 flex justify-center items-center flex-col md:flex-row '>
-            <figure className='w-52 h-96 bg-purple p-2 rounded-xl md:w-72 md:h-500'>
+            <figure className='w-64 bg-purple p-2 rounded-xl md:w-80'>
               <img
-                src=''
+                src='/images/monica.jpg'
                 alt='monica hidrugo'
-                className='w-full h-4/5 md:h-5/6 bg-halfPurple'
+                className='w-full bg-halfPurple rounded-xl'
               />
               <figcaption
-                className='text-center text-white text-xl pt-6 font-semibold md:text-2xl'
+                className='text-center text-white text-xl pt-4 pb-4 font-semibold md:text-2xl'
                 style={{ textShadow: '2px 2px 5px #1f1f1f' }}
               >
                 Monica Hidrugo
@@ -121,12 +170,56 @@ export default function Home() {
               voluptate recusandae rem illo perspiciatis nulla! Hic, voluptate!
             </article>
           </div>
-          <button className='p-2 pl-6 pr-6 w-max bg-green text-lg font-medium rounded-2xl text-white m-auto block hover:bg-hoverGreen transition-background duration-300 md:text-xl mt-4 md:mt-8'>
-            CONOCE MÁS
-          </button>
+          <Link href='/acerca'>
+            <a>
+              <button className='p-2 pl-6 pr-6 w-max bg-green text-lg font-medium rounded-2xl text-white m-auto block hover:bg-hoverGreen transition-background duration-300 md:text-xl mt-4 md:mt-8'>
+                CONOCE MÁS
+              </button>
+            </a>
+          </Link>
         </section>
         <section className='w-full pt-10 pb-10'>
           <h2 style={{ textShadow: '2px 2px 5px #8685EF' }}>¿Dónde estamos?</h2>
+          <div className='w-full max-w-screen-xl m-auto p-4 flex justify-center items-center flex-col md:flex-row md:justify-evenly '>
+            <figure className='pt-4 pb-4 w-64 md:w-80 '>
+              <h3 className='text-left text-lg font-medium md:text-xl'>
+                Sucursal Villa Maipú
+              </h3>
+              <Link href='/sucursales/villamaipu'>
+                <a>
+                  <img
+                    src='images/sucursal-2.jpg'
+                    alt='sucursal villa maipu el tallercito'
+                    className='w-full bg-green rounded-xl cursor-pointer'
+                    onMouseEnter={e => handleSucursalImgEnter(e, 2)}
+                    onMouseLeave={e => handleSucursalImgLeave(e, 2)}
+                  />
+                </a>
+              </Link>
+              <figcaption className='text-left text-lg font-medium md:text-xl'>
+                Estrada 1578 - Villa Maipú
+              </figcaption>
+            </figure>
+            <figure className='pt-4 pb-4 w-64 md:w-80'>
+              <h3 className='text-left text-lg font-medium md:text-xl'>
+                Sucursal CABA
+              </h3>
+              <Link href='/sucursales/caba'>
+                <a>
+                  <img
+                    src='images/sucursal-1.jpg'
+                    alt='sucursal villa maipu el tallercito'
+                    className='w-full bg-green rounded-xl cursor-pointer'
+                    onMouseEnter={e => handleSucursalImgEnter(e, 1)}
+                    onMouseLeave={e => handleSucursalImgLeave(e, 1)}
+                  />
+                </a>
+              </Link>
+              <figcaption className='text-left text-lg font-medium md:text-xl'>
+                Av. Entre Ríos 754 - CABA
+              </figcaption>
+            </figure>
+          </div>
         </section>
       </Layout>
     </>
