@@ -3,7 +3,7 @@ const caba = {
   name: 'Sucursal CABA',
   address: 'Av. Entre Ríos 754 - CABA',
   description:
-    'El Mercado San Cristóbal es un gran mercado que se encuentra, a pesar de su nombre, en el barrio de Monserrat de la ciudad de Buenos Aires, Argentina. Se ubica en el cruce de las avenidas Independencia y Entre Ríos. Nuestro local es el número 60 y está en el primero piso.',
+    'El Mercado San Cristóbal es un gran mercado que se encuentra, a pesar de su nombre, en el barrio de Monserrat de la ciudad de Buenos Aires, Argentina. Se ubica en el cruce de las avenidas Independencia y Entre Ríos. Nuestro local es el número 60 y está en el primer piso.',
   images: ['/images/sucursal-1.jpg'],
   routes: [
     'Colectivos: 150, 50, 5, 12, 2, 37',

@@ -15,12 +15,13 @@ export default function ResponsiveNavBar({ onView, path, setOnView }) {
   return (
     <>
       <nav
-        className={`flex md:hidden justify-start items-center flex-col fixed top-0 left-0 bg-purple mt-20 w-1/2 min-h-screen transition-all duration-300 ease-in-out ${
+        className={`flex md:hidden justify-start items-center flex-col fixed top-0 left-0 bg-purple mt-20 w-1/2 min-h-screen transition-all duration-300 ease-in-out overflow-y-auto ${
           !onView ? '-translate-y-full' : 'translate-y-0'
         } font-barlow text-lg font-medium -z-10`}
       >
         <Link href='/'>
           <a
+            onClick={() => setOnView(false)}
             className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
               path === '/' ? 'bg-green' : ''
             }`}
@@ -30,6 +31,7 @@ export default function ResponsiveNavBar({ onView, path, setOnView }) {
         </Link>
         <Link href='/acerca'>
           <a
+            onClick={() => setOnView(false)}
             className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
               path === '/acerca' ? 'bg-green' : ''
             }`}
@@ -39,6 +41,7 @@ export default function ResponsiveNavBar({ onView, path, setOnView }) {
         </Link>
         <Link href='/productos'>
           <a
+            onClick={() => setOnView(false)}
             className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
               path === '/productos' ? 'bg-green' : ''
             }`}
@@ -48,6 +51,7 @@ export default function ResponsiveNavBar({ onView, path, setOnView }) {
         </Link>
         <Link href='/servicios'>
           <a
+            onClick={() => setOnView(false)}
             className={`p-4 pl-0 pr-0 w-full text-center hover:bg-green ${
               path === '/servicios' ? 'bg-green' : ''
             }`}

@@ -21,6 +21,10 @@ module.exports = {
       brown: '#C18C7A',
       lessGray: '#A1A6B9',
       gray: '#505050',
+      sectionBg: '#F2ECFF',
+    },
+    minWidth: {
+      200: '200px',
     },
     fontFamily: {
       barlow: ['Barlow Condensed'],
@@ -42,6 +46,7 @@ module.exports = {
       },
       boxShadow: {
         normal: '5px 3px 10px #8685EF',
+        card: '2px 3px 7px #5f5f5f',
       },
       transitionProperty: {
         background: 'background-color',

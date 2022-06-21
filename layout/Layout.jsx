@@ -19,7 +19,7 @@ export default function Layout({ children }) {
       <main className='min-h-screen pt-20 pb-20'>{children}</main>
       <footer className='w-full bg-purple pb-8 pt-4'>
         <h2 className='text-white p-4 text-center underline'>
-          El Tallercito De Monica
+          El Tallercito De Mónica
         </h2>
         <div className='w-full max-w-screen-xl m-auto flex justify-center items-center flex-col'>
           <div className='w-full'>
@@ -109,10 +109,10 @@ export default function Layout({ children }) {
             </div>
           </div>
           <p className='text-white pt-10 font-medium'>
-            © 2022 Monica Hidrugo - El Tallercito
+            © 2022 Mónica Hidrugo - El Tallercito
           </p>
           <span className='text-center text-white font-medium text-lg'>
-            Cotillón y mucho más
+            cotillón y mucho más
           </span>
         </div>
       </footer>
