@@ -26,6 +26,9 @@ module.exports = {
     minWidth: {
       200: '200px',
     },
+    // maxWidth: {
+    //   300: '350px',
+    // },
     fontFamily: {
       barlow: ['Barlow Condensed'],
       lobster2: ['Lobster Two'],
