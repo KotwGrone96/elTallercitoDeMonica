@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function ProductCardMobile({ img }) {
   return (
-    <div className='w-80 bg-purple rounded-3xl flex justify-evenly items-center p-4 pl-0 pr-0 m-auto mt-4 mb-4 shadow-card '>
+    <div className='w-full max-w-xs bg-purple rounded-3xl flex justify-evenly items-center p-4 pl-0 pr-0 m-auto mt-4 mb-4 shadow-card '>
       <figure className='w-24 h-24 relative overflow-hidden rounded-full'>
         <Image src={img} alt='producto' layout='fill' objectFit='cover' />
       </figure>

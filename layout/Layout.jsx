@@ -26,7 +26,7 @@ export default function Layout({ children }) {
             <h3 className='text-white font-medium font-lobster2 text-2xl text-center pt-4'>
               CONTACTO
             </h3>
-            <div className='w-64 m-auto flex justify-center items-center flex-wrap md:pt-4'>
+            <div className='w-72 m-auto flex justify-center items-center flex-wrap md:pt-4'>
               <figure className='flex justify-start items-center w-28 m-2'>
                 <a
                   href='https://www.facebook.com/eltallercito.demonica.1'
@@ -43,10 +43,10 @@ export default function Layout({ children }) {
                         ' invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%)',
                     }}
                   />
+                  <figcaption className='text-lg pl-10 md:text-xl hover:text-white transition-colors'>
+                    Facebook
+                  </figcaption>
                 </a>
-                <figcaption className='text-lg pl-2 md:text-xl'>
-                  Facebook
-                </figcaption>
               </figure>
               <figure className='flex justify-start items-center w-28 m-2'>
                 <a
@@ -64,10 +64,10 @@ export default function Layout({ children }) {
                         ' invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%)',
                     }}
                   />
+                  <figcaption className='text-lg pl-10 md:text-xl hover:text-white transition-colors'>
+                    Instagram
+                  </figcaption>
                 </a>
-                <figcaption className='text-lg pl-2 md:text-xl'>
-                  Instagram
-                </figcaption>
               </figure>
               <figure className='flex justify-start items-center w-28 m-2'>
                 <a
@@ -85,10 +85,10 @@ export default function Layout({ children }) {
                         ' invert(100%) sepia(100%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%)',
                     }}
                   />
+                  <figcaption className='text-lg pl-10 md:text-xl hover:text-white transition-colors'>
+                    WhatsApp
+                  </figcaption>
                 </a>
-                <figcaption className='text-lg pl-2 md:text-xl'>
-                  Whats App
-                </figcaption>
               </figure>
               <figure className='flex justify-start items-center w-28 m-2'>
                 <div className='relative w-7 h-7 md:w-8 md:h-8'>

@@ -2,6 +2,7 @@
 import Head from 'next/head';
 
 import Link from 'next/link';
+import CardLink from '../components/cardLink/CardLink';
 
 export default function Home() {
   const handleSucursalImgEnter = (e, num) => {
@@ -61,81 +62,33 @@ export default function Home() {
           Nuestros Productos
         </h2>
         <div className='w-full max-w-screen-xl m-auto flex justify-center items-center flex-wrap pt-4 md:justify-evenly xl:justify-between md:pt-10 pl-4 pr-4'>
-          <figure className=''>
-            <img
-              src=''
-              alt='Disfraces'
-              className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
-            />
-            <figcaption
-              style={{
-                textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
-              }}
-              className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
-            >
-              DISFRACES
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src=''
-              alt='Cotillón'
-              className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
-            />
-            <figcaption
-              style={{
-                textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
-              }}
-              className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
-            >
-              COTILLÓN
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src=''
-              alt='Tortas'
-              className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
-            />
-            <figcaption
-              style={{
-                textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
-              }}
-              className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
-            >
-              TORTAS
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src=''
-              alt='Castillo Inflable'
-              className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
-            />
-            <figcaption
-              style={{
-                textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
-              }}
-              className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
-            >
-              CASTILLO INFLABLE
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src=''
-              alt='metegol'
-              className='w-32 h-48  m-4 bg-halfPurple md:w-52 md:h-60 md:m-0'
-            />
-            <figcaption
-              style={{
-                textShadow: '2px 2px 3px #00C896,-2px -2px 3px #8685EF',
-              }}
-              className='font-medium -translate-y-4 text-center text-xl text-white md:translate-y-0 md:text-2xl'
-            >
-              METEGOL
-            </figcaption>
-          </figure>
+          <CardLink
+            img='/images/disfraz-example-desktop.jpg'
+            link='/productos#disfraces'
+            title='DISFRACES'
+          />
+          <CardLink
+            img='/images/cotillon-example.jpg'
+            link='/productos#cotillon'
+            title='COTILLÓN'
+          />
+
+          <CardLink
+            img='/images/product-example.jpg'
+            link='/productos#tortas'
+            title='TORTAS'
+          />
+          <CardLink
+            img='/images/castillo.jpg'
+            link='/servicios'
+            title='CASTILLO'
+          />
+
+          <CardLink
+            img='/images/metegol.jpg'
+            link='/servicios'
+            title='METEGOL'
+          />
         </div>
       </section>
       <section className='w-full bg-halfPurple pb-10'>
@@ -165,7 +118,7 @@ export default function Home() {
           >
             Hola, mi nombre es Mónica
             <br />
-            y esto es El Tallercito!!!
+            y este es El Tallercito!!!
             <br />
             Un lugar dónde encontrarás todo lo que necesitás para tus festejos.
             Amamos lo que hacemos y estamos comprometidos con ustedes para poder
